@@ -1,0 +1,44 @@
+# SSH Enumeration Lab
+
+## Objective
+
+Learn how to enumerate an SSH service running on Metasploitable 2 using Nmap.
+
+## Target
+
+- Machine: Metasploitable 2
+- IP Address: 192.168.1.15
+
+## Commands Used
+
+```bash
+nmap -sV -p 22 192.168.1.15
+
+nmap -sV --version-all -p 22 192.168.1.15
+
+nmap --script ssh2-enum-algos -p 22 192.168.1.15
+
+nmap --script ssh-hostkey -p 22 192.168.1.15
+
+nmap --script ssh-auth-methods -p 22 192.168.1.15
+```
+
+## Findings
+
+- SSH service detected on port 22.
+- OpenSSH version identified.
+- Supported SSH encryption algorithms enumerated.
+- SSH host keys collected.
+- Supported authentication methods identified.
+
+## Learning Outcomes
+
+- Learned how to detect SSH services.
+- Learned how to identify SSH versions.
+- Learned how to enumerate SSH algorithms.
+- Learned how to retrieve SSH host keys.
+- Learned how to identify supported authentication methods.
+
+## Screenshots
+
+See the `screenshots` folder for the command outputs.
