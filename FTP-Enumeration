@@ -1,0 +1,55 @@
+# FTP Enumeration Lab
+
+## Objective
+
+Learn how to enumerate an FTP service and test anonymous login.
+
+## Target
+
+Metasploitable 2
+
+IP Address: 192.168.1.15
+
+## Commands
+
+```bash
+nmap -sV -p 21 192.168.1.15
+
+ftp 192.168.1.15
+# Username: anonymous
+# Password: anonymous
+
+pwd
+ls
+dir
+help
+status
+binary
+ascii
+bye
+
+nmap --script ftp-anon 192.168.1.15
+```
+
+## Findings
+
+- FTP service detected on port 21
+- Service version: vsFTPd 2.3.4
+- Anonymous login is enabled
+- Successfully connected to the FTP server
+- No files were available in the FTP root directory
+- FTP enumeration completed successfully
+
+## Learning
+
+- Learned FTP enumeration
+- Tested anonymous FTP access
+- Used common FTP client commands
+- Used Nmap NSE script (ftp-anon)
+
+## Screenshots
+
+See the screenshots folder.
+## Screenshots
+
+See the screenshots folder.
